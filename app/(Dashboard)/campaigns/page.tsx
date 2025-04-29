@@ -10,7 +10,13 @@ import { ChevronDown } from 'lucide-react'
 export default function CampaignDashboard() {
   const [searchQuery, setSearchQuery] = useState("")
 
-  const metrics = [
+  const metrics: {
+    title: string
+    value: string
+    change: string
+    trend: "up" | "down"
+    data: number[]
+  }[] = [
     {
       title: "Total Campaigns",
       value: "1,847",
